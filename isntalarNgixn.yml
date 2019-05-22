@@ -10,5 +10,5 @@
       copy: src=/home/mariano/repositorio/wwwscba/www.scba.gov.ar  dest=/usr/share/nginx/www/ mode=0644
       
     
-     - name: start nginx
+    - name: start nginx
       service: name=nginx state=started
