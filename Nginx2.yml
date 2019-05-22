@@ -1,14 +1,13 @@
 ---
 - name: Install nginx
   hosts: all
-  become: true
 
-  - name: Insert Index Page
+- name: Insert Index Page
     template:
       src: index.html
       dest: /usr/share/nginx/html/index.html
   
-  - name: Start NGiNX
+- name: Start NGiNX
     service:
       name: nginx
       state: started
