@@ -8,12 +8,13 @@
     yum:
       name: nginx
       state: present
-
-  - name: Insert Index Page
-    template:
-      src: index.html
-      dest: /usr/share/nginx/html/index.html
-
+  
+  - name: If follow=yes, /path/to/file will be overwritten by contents of foo.conf
+    copy:
+      src: /etc/foo.conf
+      dest: /path/to/link  # link to /path/to/file
+      follow: yes
+  
   - name: Start NGiNX
     service:
       name: nginx
