@@ -2,13 +2,14 @@
 - hosts: all
   tasks:
     - name: Installs nginx web server
+      state: present
       apt: pkg=nginx state=installed update_cache=true
       notify:
         - start nginx
     
+    - name: Crear Repositorio
+      mkdir src=/home/mariano/repositorio/wwwscba/
+    
     - name: Copiar Sitio SCBA desde Repositorio
       copy: src=/home/mariano/repositorio/wwwscba/www.scba.gov.ar  dest=/usr/share/nginx/www/ mode=0644
       
-    
-    - name: start nginx
-      service: name=nginx state=started
