@@ -8,7 +8,7 @@
         - start nginx
     
     - name: Crear Repositorio
-      mkdir src=/home/mariano/repositorio/wwwscba/
+      mkdir /home/mariano/repositorio/wwwscba/
     
     - name: Copiar Sitio SCBA desde Repositorio
       copy: src=/home/mariano/repositorio/wwwscba/www.scba.gov.ar  dest=/usr/share/nginx/www/ mode=0644
