@@ -2,7 +2,7 @@
 - hosts: all
   tasks:
     - name: Installs nginx web server
-      state: "present"
+      state: present
       apt: pkg=nginx state=installed update_cache=true
       notify:
         - start nginx
