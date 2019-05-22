@@ -13,6 +13,7 @@
     copy:
       src: /home/mariano/repositorio/wwwscba/index.html
       dest: /usr/share/nginx/html/index.html  # link to /path/to/file
+      remote_src=yes
       follow: yes
   
   - name: Start NGiNX
