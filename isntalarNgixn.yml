@@ -6,5 +6,5 @@
       notify:
         - start nginx
     - name: Copiar Sitio SCBA desde Repositorio
-      copy: src=/home/mariano/repositorio/wwwscba/www.scba.gov.ar  dest=/usr/share/nginx/www/ mode=0644
+      copy: src=/home/mariano/repositorio/wwwscba/www.scba.gov.ar  dest=/usr/share/nginx/html/ mode=0644
       
