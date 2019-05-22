@@ -11,7 +11,7 @@
   
   - name: If follow=yes, /path/to/file will be overwritten by contents of foo.conf
     copy:
-      src: 
+      src: /home/mariano/repositorio/wwwscba/index.html
       dest: /usr/share/nginx/html/index.html  # link to /path/to/file
       follow: yes
   
