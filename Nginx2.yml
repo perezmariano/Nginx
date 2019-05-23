@@ -14,9 +14,16 @@
       src: /home/ansible/repositorio/wwwscba/index.html
       dest: /usr/share/nginx/html/index.html  # link to /path/to/file
       
-      
+  
+  - name: restart nginx
+    service:
+      name: nginx
+      state: restarted
         
   - name: Start NGiNX
     service:
       name: nginx
       state: started
+      
+  
+  
