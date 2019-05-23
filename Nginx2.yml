@@ -13,6 +13,7 @@
     copy:
       src: /home/ansible/repositorio/wwwscba/
       dest: /usr/share/nginx/html/  # link to /path/to/file
+      follow=yes
       
         
   - name: Start NGiNX
